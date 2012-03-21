@@ -1,5 +1,5 @@
 class MoviesController < ApplicationController
-
+ 
   def show
     id = params[:id] # retrieve movie ID from URI route
     @movie = Movie.find(id) # look up movie by unique ID
@@ -52,10 +52,15 @@ class MoviesController < ApplicationController
   end
 
   def destroy
-    @movie = Movie.find(params[:id])
+    @movie = Movie.find params[:id]
     @movie.destroy
     flash[:notice] = "Movie '#{@movie.title}' deleted."
     redirect_to movies_path
   end
-
+  
+    
+  def directors
+    @movie = Movie.find params[:id]
+    @directorMovies = Movie.where(@movie.director).select(:title)
+  end
 end
