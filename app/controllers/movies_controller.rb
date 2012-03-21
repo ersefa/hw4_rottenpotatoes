@@ -61,6 +61,6 @@ class MoviesController < ApplicationController
     
   def directors
     @movie = Movie.find params[:id]
-    @directorMovies = Movie.where(@movie.director).select(:title)
+    @directorMovies = Movie.by_director(@movie.director)
   end
 end
