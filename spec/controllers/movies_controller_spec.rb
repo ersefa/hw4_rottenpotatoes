@@ -78,6 +78,16 @@ describe MoviesController do
     end
   end
   
+  context '#edit' do
+    let(:movie) { stub_model Movie, :id => 23 }
+    
+    it 'should edit the movie' do
+      Movie.should_receive(:find).with("23").and_return(movie)
+      get :edit, :id => 23
+      response.should render_template(:edit)
+    end
+  end
+  
   context '#show' do
     
     let(:movie) { stub_model Movie, :id => 23 }
@@ -95,7 +105,19 @@ describe MoviesController do
       
     it 'should call the index method of the Movie model' do
       Movie.should_receive(:all_ratings)
+      Movie.should_receive(:find_all_by_rating)
       get :index
+    end
+    
+    it 'should order the table by title' do
+      Movie.should_receive(:all_ratings)
+      get :index, :sort => 'title'
+    end
+    
+    it 'should order the table by release date' do
+      Movie.should_receive(:all_ratings)
+      get :index, :sort => 'release_date'
+      
     end
   
   end
