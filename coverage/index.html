@@ -21,21 +21,21 @@
       <img src="./assets/0.4.5/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2012-03-27T11:35:32-07:00">2012-03-27T11:35:32-07:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2012-03-27T12:21:02-07:00">2012-03-27T12:21:02-07:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     All Files
-    (<span class="red">49.09%</span>)
+    (<span class="red">78.18%</span>)
   </h2>
   <a name="AllFiles"></a>
   <div>
     <b>5</b> files in total.
     <b>55</b> relevant lines. 
-    <span class="green"><b>27</b> lines covered</span> and
-    <span class="red"><b>28</b> lines missed </span>
+    <span class="green"><b>43</b> lines covered</span> and
+    <span class="red"><b>12</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -61,11 +61,11 @@
       
       <tr>
         <td><a href="#f0c9e88477279c0ec42c33bc48f1854718626ca7" class="src_link" title="./app/controllers/movies_controller.rb">./app/controllers/movies_controller.rb</a></td>
-        <td class="red">40.91 %</td>
+        <td class="red">77.27 %</td>
         <td>73</td>
         <td>44</td>
-        <td>18</td>
-        <td>26</td>
+        <td>34</td>
+        <td>10</td>
       </tr>
       
       <tr>
@@ -103,14 +103,14 @@
           <div class="file_list_container" id="Controllers">
   <h2>
     Controllers
-    (<span class="red">43.48%</span>)
+    (<span class="red">78.26%</span>)
   </h2>
   <a name="Controllers"></a>
   <div>
     <b>2</b> files in total.
     <b>46</b> relevant lines. 
-    <span class="green"><b>20</b> lines covered</span> and
-    <span class="red"><b>26</b> lines missed </span>
+    <span class="green"><b>36</b> lines covered</span> and
+    <span class="red"><b>10</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -136,11 +136,11 @@
       
       <tr>
         <td><a href="#f0c9e88477279c0ec42c33bc48f1854718626ca7" class="src_link" title="./app/controllers/movies_controller.rb">./app/controllers/movies_controller.rb</a></td>
-        <td class="red">40.91 %</td>
+        <td class="red">77.27 %</td>
         <td>73</td>
         <td>44</td>
-        <td>18</td>
-        <td>26</td>
+        <td>34</td>
+        <td>10</td>
       </tr>
       
     </tbody>
@@ -366,7 +366,7 @@
     <tr>
       <td colspan="3">
         <h3>./app/controllers/movies_controller.rb</h3>
-        <h4><span class="red">40.91 %</span> covered</h4>
+        <h4><span class="red">77.27 %</span> covered</h4>
       </td>
     </tr>
     <tr>
@@ -417,7 +417,7 @@
     </tr>
   
     
-    <tr class="miss" data-hits="0">
+    <tr class="hit" data-hits="1">
       <td class="line_number">
         <pre>4</pre>
       </td>
@@ -425,12 +425,12 @@
         <pre>    id = params[:id] # retrieve movie ID from URI route</pre>
       </td>
       <td class="hits">
-        0
+        1
       </td>
     </tr>
   
     
-    <tr class="miss" data-hits="0">
+    <tr class="hit" data-hits="1">
       <td class="line_number">
         <pre>5</pre>
       </td>
@@ -438,7 +438,7 @@
         <pre>    @movie = Movie.find(id) # look up movie by unique ID</pre>
       </td>
       <td class="hits">
-        0
+        1
       </td>
     </tr>
   
@@ -495,7 +495,7 @@
     </tr>
   
     
-    <tr class="miss" data-hits="0">
+    <tr class="hit" data-hits="1">
       <td class="line_number">
         <pre>10</pre>
       </td>
@@ -503,12 +503,12 @@
         <pre>    sort = params[:sort] || session[:sort]</pre>
       </td>
       <td class="hits">
-        0
+        1
       </td>
     </tr>
   
     
-    <tr class="miss" data-hits="0">
+    <tr class="hit" data-hits="1">
       <td class="line_number">
         <pre>11</pre>
       </td>
@@ -516,7 +516,7 @@
         <pre>    case sort</pre>
       </td>
       <td class="hits">
-        0
+        1
       </td>
     </tr>
   
@@ -586,7 +586,7 @@
     </tr>
   
     
-    <tr class="miss" data-hits="0">
+    <tr class="hit" data-hits="1">
       <td class="line_number">
         <pre>17</pre>
       </td>
@@ -594,12 +594,12 @@
         <pre>    @all_ratings = Movie.all_ratings</pre>
       </td>
       <td class="hits">
-        0
+        1
       </td>
     </tr>
   
     
-    <tr class="miss" data-hits="0">
+    <tr class="hit" data-hits="1">
       <td class="line_number">
         <pre>18</pre>
       </td>
@@ -607,7 +607,7 @@
         <pre>    @selected_ratings = params[:ratings] || session[:ratings] || {}</pre>
       </td>
       <td class="hits">
-        0
+        1
       </td>
     </tr>
   
@@ -625,7 +625,7 @@
     </tr>
   
     
-    <tr class="miss" data-hits="0">
+    <tr class="hit" data-hits="1">
       <td class="line_number">
         <pre>20</pre>
       </td>
@@ -633,7 +633,7 @@
         <pre>    if params[:sort] != session[:sort]</pre>
       </td>
       <td class="hits">
-        0
+        1
       </td>
     </tr>
   
@@ -703,7 +703,7 @@
     </tr>
   
     
-    <tr class="miss" data-hits="0">
+    <tr class="hit" data-hits="1">
       <td class="line_number">
         <pre>26</pre>
       </td>
@@ -711,7 +711,7 @@
         <pre>    if params[:ratings] != session[:ratings] and @selected_ratings != {}</pre>
       </td>
       <td class="hits">
-        0
+        1
       </td>
     </tr>
   
@@ -781,7 +781,7 @@
     </tr>
   
     
-    <tr class="miss" data-hits="0">
+    <tr class="hit" data-hits="1">
       <td class="line_number">
         <pre>32</pre>
       </td>
@@ -789,7 +789,7 @@
         <pre>    @movies = Movie.find_all_by_rating(@selected_ratings.keys, ordering)</pre>
       </td>
       <td class="hits">
-        0
+        1
       </td>
     </tr>
   
@@ -885,7 +885,7 @@
     </tr>
   
     
-    <tr class="miss" data-hits="0">
+    <tr class="hit" data-hits="1">
       <td class="line_number">
         <pre>40</pre>
       </td>
@@ -893,12 +893,12 @@
         <pre>    @movie = Movie.create!(params[:movie])</pre>
       </td>
       <td class="hits">
-        0
+        1
       </td>
     </tr>
   
     
-    <tr class="miss" data-hits="0">
+    <tr class="hit" data-hits="1">
       <td class="line_number">
         <pre>41</pre>
       </td>
@@ -906,12 +906,12 @@
         <pre>    flash[:notice] = &quot;#{@movie.title} was successfully created.&quot;</pre>
       </td>
       <td class="hits">
-        0
+        1
       </td>
     </tr>
   
     
-    <tr class="miss" data-hits="0">
+    <tr class="hit" data-hits="1">
       <td class="line_number">
         <pre>42</pre>
       </td>
@@ -919,7 +919,7 @@
         <pre>    redirect_to movies_path</pre>
       </td>
       <td class="hits">
-        0
+        1
       </td>
     </tr>
   
@@ -1015,7 +1015,7 @@
     </tr>
   
     
-    <tr class="miss" data-hits="0">
+    <tr class="hit" data-hits="1">
       <td class="line_number">
         <pre>50</pre>
       </td>
@@ -1023,12 +1023,12 @@
         <pre>    @movie = Movie.find params[:id]</pre>
       </td>
       <td class="hits">
-        0
+        1
       </td>
     </tr>
   
     
-    <tr class="miss" data-hits="0">
+    <tr class="hit" data-hits="1">
       <td class="line_number">
         <pre>51</pre>
       </td>
@@ -1036,12 +1036,12 @@
         <pre>    @movie.update_attributes!(params[:movie])</pre>
       </td>
       <td class="hits">
-        0
+        1
       </td>
     </tr>
   
     
-    <tr class="miss" data-hits="0">
+    <tr class="hit" data-hits="1">
       <td class="line_number">
         <pre>52</pre>
       </td>
@@ -1049,12 +1049,12 @@
         <pre>    flash[:notice] = &quot;#{@movie.title} was successfully updated.&quot;</pre>
       </td>
       <td class="hits">
-        0
+        1
       </td>
     </tr>
   
     
-    <tr class="miss" data-hits="0">
+    <tr class="hit" data-hits="1">
       <td class="line_number">
         <pre>53</pre>
       </td>
@@ -1062,7 +1062,7 @@
         <pre>    redirect_to movie_path(@movie)</pre>
       </td>
       <td class="hits">
-        0
+        1
       </td>
     </tr>
   
